@@ -4,6 +4,9 @@
     font-family: "Jost" 
   
 }
+.title {
+    font-family: "Jost"  
+}
 .img{
     background-image: url('../img/1.jpg');
     padding: 250px !important;
@@ -13,22 +16,11 @@
 .font-weight-bold {
     font-weight: 700 !important;
 }
-.btn, h1, h2, h3, h4, h5, h6, p {
-    font-family: "Jost";
-}
+
 h2 {
     font-size: 3.4rem;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: Poppins, sans-serif;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #222;
-}
-h1, h2, h3, h4, h5, h6, p {
-    font-weight: 400;
-    margin: 0 0 2rem;
-}
+
 
 h2 {
     display: block;
@@ -63,3 +55,5 @@ h2 {
 .p-100{
     padding: 100px;
 }
+
+

@@ -1,3 +1,5 @@
+let counter = document.getElementById("counter")
+
 let products = [
     {
         id: 1,
@@ -45,8 +47,28 @@ let products = [
 
 
 ]
+
+let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(productid) {
-    console.log(productid)
+let findedProduct = products.find((item)=>{
+    return productid == item.id
+ })   
+ let productidx = cartArr.findIndex((item) =>{
+    return item.id == productid
+ })
+ if (productidx !== -1){
+    cartArr[productidx].quantity++;
+    alert("item already added")
+ }else{
+    products.quantity = 1;
+    cartArr.push(product);
+ }
+
+ findedProduct.quantity = 0;
+ cartArr.push(findedProduct)
+ localStorage.setItem("cart",JSON.stringify(cartArr))
+
+counter.innerHTML =  cartArr.length
 
 };
 let productElement = document.getElementById("product");
@@ -63,6 +85,7 @@ products.forEach((product, idx) => {
             `
 })
 
+counter.innerHTML =  cartArr.length
 
 
 

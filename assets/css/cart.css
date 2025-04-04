@@ -1,0 +1,81 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f5f0;
+  color: #333;
+}
+
+header {
+  background-color: #1c1c1c;
+}
+
+.navbar ul li {
+  list-style: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar ul li:hover {
+  color: #f7c59f;
+}
+
+.cart-table {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shop-table th, .shop-table td {
+  padding: 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+.shop-table th {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-name-section a {
+  font-weight: 600;
+  color: #a0522d;
+  text-decoration: none;
+}
+
+.product-name-section a:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  max-width: 140px;
+}
+
+.input-group button {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.input-group input {
+  text-align: center;
+}
+
+.product-remove i {
+  color: #ff6b6b;
+  font-size: 18px;
+}
+
+.product-remove:hover i {
+  color: #ff0000;
+}
+
+.amount {
+  font-weight: bold;
+  color: #222;
+}
+
+.product-thumbnail img {
+  border-radius: 10px;
+}

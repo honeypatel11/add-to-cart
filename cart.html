@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ring Jewelry Cart</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/cart.css">
+ 
+</head>
+
+<body>
+  <header class="py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="#" class="logo">
+        <img src="./assets/img/logo.png" alt="logo" style="width: 150px;">
+      </a>
+      <nav class="navbar d-flex">
+        <ul class="d-flex text-white gap-4 fw-semibold align-items-center mb-0">
+          <li>Home</li>
+          <li>Categories</li>
+          <li>Products</li>
+          <li>Pages</li>
+          <li>Blog</li>
+          <li>About Us</li>
+          <li>
+            <i class="ri-search-line fs-5"></i>
+          </li>
+          <li>
+            <button type="button" class="btn btn-outline-light position-relative">
+              <i class="ri-shopping-cart-fill"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="counter">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <h3 class="mb-4">Your Shopping Cart</h3>
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table shop-table cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th></th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="product-thumbnail">
+                <a href="product-simple.html">
+                  <img src="./assets/img/1-1.jpg" width="100" alt="Ring">
+                </a>
+              </td>
+              <td class="product-name">
+                <div class="product-name-section">
+                  <a href="product-simple.html">Silver and Diamond Ring</a>
+                </div>
+              </td>
+              <td><span class="amount">$129.99</span></td>
+              <td>
+                <div class="input-group">
+                  <button class="quantity-minus">-</button>
+                  <input type="number" class="form-control" min="1" max="10" value="1">
+                  <button class="quantity-plus">+</button>
+                </div>
+              </td>
+              <td><span class="amount">$129.99</span></td>
+              <td><a href="#" class="product-remove"><i class="fas fa-times"></i></a></td>
+            </tr>
+
+            <tr>
+              <td class="product-thumbnail">
+                <a href="product-simple.html">
+                  <img src="./assets/img/2-1.jpg" width="100" alt="Headgear">
+                </a>
+              </td>
+              <td class="product-name">
+                <div class="product-name-section">
+                  <a href="product-simple.html">Women's Elegant Headgear</a>
+                </div>
+              </td>
+              <td><span class="amount">$98.00</span></td>
+              <td>
+                <div class="input-group">
+                  <button class="quantity-minus">-</button>
+                  <input type="number" class="form-control" min="1" max="10" value="1">
+                  <button class="quantity-plus">+</button>
+                </div>
+              </td>
+              <td><span class="amount">$98.00</span></td>
+              <td><a href="#" class="product-remove"><i class="fas fa-times"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
