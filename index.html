@@ -2,71 +2,76 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ring Jewelry Cart</title>
-  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+ 
 </head>
 
 <body>
-  <header class="bg-black">
-    <div class="py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div class="logo">
-          <a href="" class="">
-            <img src="./assets/img/logo.png" alt="logo" class="" width="40%">
-          </a>
-        </div>
-        <div>
-          <nav class="navbar d-flex">
-            <ul class="d-flex text-white gap-4 fw-semibold align-items-center">
-              <li>Home</li>
-              <li>Categories</li>
-              <li>Products</li>
-              <li>Pages</li>
-              <li>Blog</li>
-              <li>About Us</li>
-              <span class="text-white fs-6">
-                <i class="ri-search-eye-line "></i>
-              </span>
-              <button type="button" class="btn btn-outline-light position-relative">
-                <i class="ri-shopping-cart-fill"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="counter">
-                  0
-                </span>
-              </button>
+ 
+  <header class="bg-dark text-white">
+    <div class="container py-3">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <a href="#" class="d-flex align-items-center">
+          <img src="./assets/img/logo.png" alt="logo" width="100" />
+        </a>
+        <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar navbar-expand-lg">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-white fw-semibold gap-3">
+              <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Categories</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Products</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Pages</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">About Us</a></li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"><i class="ri-search-eye-line"></i></a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-outline-light position-relative" onclick="window.location = './cart.html'">
+                  <i class="ri-shopping-cart-fill"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="counter">
+                    0
+                  </span>
+                </button>
+              </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
-  <section class="py-5 img">
 
+
+  <section class="img text-center py-5">
     <div class="container">
-      <div class="banner-content text-center">
-        <h4 class="banner-subtitle text-uppercase fs-1 fw-semibold">Women's Style</h4> 
-        <h2 class="banner-title mb-3 font-weight-bold slide-animate text-dark show-content">
-          Your perfect jewel ring</h2>
-        <p class="">
-          Get Free Shipping on all order over $99.99
-        </p>
-        <a href="" class="btn btn-dark btn-ellipse " >
-          View Collection</a>
+      <div class="banner-content">
+        <h4 class="text-uppercase fs-1 fw-semibold">Women's Style</h4>
+        <h2 class="mb-3 fw-bold text-light">Your perfect jewel ring</h2>
+        <p class="fs-5">Get Free Shipping on all orders over $99.99</p>
+        <a href="#" class="btn btn-dark btn-ellipse mt-3">View Collection</a>
       </div>
     </div>
   </section>
 
-  <section class="p-100">
+
+  <section class="py-5">
     <div class="container">
-      <h3 class="fw-semibold text-center title">New Products</h3>
-      <div class="row py-3" id="product">
+      <h3 class="fw-semibold text-center mb-4 title">New Products</h3>
+      <div class="row" id="product">
+
       </div>
     </div>
-   </section>
+  </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 

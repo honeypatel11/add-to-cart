@@ -1,59 +1,45 @@
-*{
-    text-decoration: none !important;
-    list-style: none;
-    font-family: "Jost" 
-  
+
+.img {
+  background: url('../img/1.jpg') no-repeat center center/cover;
+  color: white;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.banner-content h4,
+.banner-content h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn-ellipse {
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
 .title {
-    font-family: "Jost"  
-}
-.img{
-    background-image: url('../img/1.jpg');
-    padding: 250px !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.font-weight-bold {
-    font-weight: 700 !important;
+  position: relative;
+  display: inline-block;
 }
 
-h2 {
-    font-size: 3.4rem;
+.title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    
-}
-.setbox{
-    box-shadow: 20px, 20px , 20px , 20px #222;
-    align-items: center;   
-  
-}
-.product-card {
- 
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    background: #fff;
-    transition: transform 0.3s;
-}
-.product-card:hover {
-    transform: scale(1.05);
-}
-.product-image {
-    max-height: 200px;
-    object-fit: cover;
-}
-.p-100{
-    padding: 100px;
+ul li {
+  list-style: none;
+  cursor: pointer;
 }
 
-
+.navbar-nav .nav-link:hover {
+  color: #f8d27c;
+  transition: 0.3s;
+}

@@ -48,27 +48,27 @@ let products = [
 
 ]
 
+
 let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(productid) {
-let findedProduct = products.find((item)=>{
-    return productid == item.id
- })   
- let productidx = cartArr.findIndex((item) =>{
-    return item.id == productid
- })
- if (productidx !== -1){
-    cartArr[productidx].quantity++;
-    alert("item already added")
- }else{
-    products.quantity = 1;
-    cartArr.push(product);
- }
-
- findedProduct.quantity = 0;
- cartArr.push(findedProduct)
- localStorage.setItem("cart",JSON.stringify(cartArr))
-
-counter.innerHTML =  cartArr.length
+    let findedProduct = products.find((item) => {
+        return productid == item.id
+    })
+    let productidx = cartArr.findIndex((item) => {
+        return item.id == productid
+    })
+    if (productidx != -1) {
+        // cartArr[productidx].quantity++;
+        alert("item already added")
+    } else {
+        products.quantity = 1;
+        cartArr.push(findedProduct)
+    }
+    
+    console.log(findedProduct);
+    findedProduct.quantity = 1;
+    localStorage.setItem("cart", JSON.stringify(cartArr))
+    counter.innerHTML = cartArr.length
 
 };
 let productElement = document.getElementById("product");
@@ -85,7 +85,7 @@ products.forEach((product, idx) => {
             `
 })
 
-counter.innerHTML =  cartArr.length
+counter.innerHTML = cartArr.length
 
 
 
