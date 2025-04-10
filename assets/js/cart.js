@@ -1,6 +1,12 @@
 let localArr = JSON.parse(localStorage.getItem("cart")) || [];
+let total;
+
+
 let counterMain = document.getElementById("counter");
 let tableContent = document.getElementById("tableContent")
+let newQuntity;
+
+ 
 
 function updateCartCounters(count) {
     counterMain.innerText = count;
@@ -13,7 +19,7 @@ function deleteItem(idx) {
 
 
 function updateQuntity(idx, value) {
-    let newQuntity = localArr[idx].quantity + value;
+    newQuntity = localArr[idx].quantity += value;
 
     if (newQuntity <= 0) {
         deleteItem(idx)
@@ -27,10 +33,14 @@ function updateQuntity(idx, value) {
 
 
 function displayItems() {
+     total = 0;
     updateCartCounters(localArr.length);
     tableContent.innerHTML = ''
     localArr.forEach((data, idx) => {
+        console.log(data);
         
+        let subTotal = data.quantity * data.price;
+       total = total + subTotal;
         tableContent.innerHTML += `
         <tr>
         <td class="product-thumbnail">
@@ -51,17 +61,27 @@ function displayItems() {
         <button class="quantity-plus" onclick = "updateQuntity(${idx},1)">+</button>
         </div>
         </td>
-        <td><span class="amount">$129.99</span></td>
+        <td><span class="amount">$${subTotal}</span></td>
         <td><a href="#" class="product-remove" onclick="deleteItem(${idx})"><i class="fas fa-times"></i></a></td>
         </tr>
         `
     })
 
+    document.getElementById("total").innerHTML = "";
+    document.getElementById("total").innerHTML += `
+    
+        <h5 class="card-title">Total :-</h5>
+            <input type="" class="" id="totalamount">
+            <p class="card-text">Thank You.</p>
+           
+    `
+    document.getElementById("totalamount").value = total;
 
 }
 
-displayItems()
 
+displayItems()
+updateCartCounters(localArr.length);
 // function clearAll() {
 //     localStorage.removeItem("cart")
 //     location.reload();
